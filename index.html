@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="slider">
+        <i class="fa-solid fa-chevron-left" onclick="left()"></i>
+        <img id="image" src="img/1.jpg" alt="" />
+        <i class="fa-solid fa-chevron-right" onclick="right()"></i>
+      </div>
+    </main>
+    <script>
+      let ig = document.getElementById("image");
+      let c = 1;
+      let x = 1;
+      let op;
+      // setInterval(function () {
+      //   if (x == 8) {
+      //     x = 1;
+      //     ig.src = `/img/${x}.jpg`;
+      //   } else {
+      //      ig.src = `/img/${++x}.jpg`;
+      //      console.log(ig)
+      //      ig.style = "opacity: 0;";
+      //   }
+      // }, 3000);
+
+      function right() {
+        c++;
+        if (c == 9) {
+          c = 1;
+          console.log(c);
+          ig.src = `img/${c}.jpg`;
+        } else {
+          console.log(c);
+
+          ig.src = `img/${c}.jpg`;
+        }
+      }
+      function left() {
+        c--;
+        if (c <= 0) {
+          c = 8;
+          console.log(c);
+
+          ig.src = `img/${c}.jpg`;
+        } else {
+          console.log(c);
+
+          ig.src = `img/${c}.jpg`;
+        }
+      }
+    </script>
+  </body>
+</html>
